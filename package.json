@@ -1,0 +1,24 @@
+{
+  "name": "workflow-caching",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Micahperez2/node-workflow-caching.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Micahperez2/node-workflow-caching/issues"
+  },
+  "homepage": "https://github.com/Micahperez2/node-workflow-caching#readme",
+  "dependencies": {
+    "async": "^3.2.4",
+    "express": "^4.18.1",
+    "jest": "^28.1.3"
+  }
+}
