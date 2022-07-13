@@ -20,11 +20,6 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
-
-      - if: ${{ steps.cache-npm.outputs.cache-hit == 'false' }}
-        name: List the state of node modules
-        continue-on-error: true
-        run: npm list
         
       - if: ${{ steps.cache-npm.outputs.cache-hit == 'false' }}
         name: Install dependencies
