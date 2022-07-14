@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "echo 'build'",
-    "test": "echo 'test' && touch outputs/test-outputs/code-coverage.html && echo 'results' > outputs/test-outputs/code-coverage.html && "
+    "test": "mkdir -p outputs/test-outputs && touch outputs/test-outputs/code-coverage.html && echo 'results' > outputs/test-outputs/code-coverage.html"
   },
   "repository": {
     "type": "git",
