@@ -11,5 +11,8 @@ jobs:
     steps:
       - id: step1
         run: echo "::set-output name=location::california"
-      - id: step2
-        run: echo 'sacramento is a city in ${{ steps.step1.outputs.location }}'
+  job2:
+    runs-on: ubuntu-latest
+    needs: job1
+    steps:
+      - run: echo 'sacramento is a city in ${{needs.job1.outputs.output1}}'
