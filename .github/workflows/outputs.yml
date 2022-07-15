@@ -12,4 +12,4 @@ jobs:
       - id: step1
         run: echo "::set-output name=location::california"
       - id: step2
-        run: echo 'sacramento is a city in ${{ step1.outputs.test }}'
+        run: echo 'sacramento is a city in ${{ steps.step1.outputs.location }}'
