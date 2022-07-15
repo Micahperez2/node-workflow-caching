@@ -1,0 +1,15 @@
+name: Outputs Example
+
+on: [push, workflow_dispatch]
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    # Map a step output to a job output
+    outputs:
+      output1: ${{ steps.step1.outputs.location}}
+    steps:
+      - id: step1
+        run: echo "::set-output name=location::california"
+      - id: step2
+        run: echo 'sacramento is a city in ${{needs.job1.outputs.output1}}'
